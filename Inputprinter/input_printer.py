@@ -4,7 +4,7 @@ import sys
 
 settings = {}
 
-settings["Filepath"] = "Small_Projects\Inputprinter\printertext.txt"
+settings["Filepath"] = os.path.join(os.path.dirname(__file__), "printertext.txt")
 
 
 # helper function, returns True if file exists and is not empty
