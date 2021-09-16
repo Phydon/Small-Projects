@@ -43,7 +43,7 @@ def main():
         if is_non_zero_file(settings["Filepath"]):
             try:
                 # call local standard printer
-                # os.startfile(settings["Filepath"], "print")
+                os.startfile(settings["Filepath"], "print")
                 print("File printed.")
                 break  # remove for looping over several inputs
             except Exception as e:
