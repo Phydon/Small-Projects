@@ -14,4 +14,3 @@ def runscript(filepath=default_file):
 
 if __name__ == "__main__":
     runscript()
-    # runscript("C:/Users/Pohl/Desktop/main/testfile.py")
