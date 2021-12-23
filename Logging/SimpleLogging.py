@@ -12,8 +12,8 @@ def logging(inp_msg, filepath=json_logging):
             logs = json.load(j)
 
             date = str(dt.datetime.now())
-            item = [{date: str(inp_msg)}]
-            logs["logging"].append(item)
+            item = {date: str(inp_msg)}
+            logs.update(item)
 
             j.seek(0)
             json.dump(logs, j, indent=4)
