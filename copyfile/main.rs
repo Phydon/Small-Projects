@@ -5,13 +5,13 @@ fn main() {
     let src_path: &str = "/home/phydon/main/testfile.txt";
     let dst_path: &str = "/home/phydon/main/test/testfile.txt";
 
-    copy_file(src_path, dst_path).unwrap();
+    copy_file(src_path, dst_path).expect("Failed to copy file");
 }
 
 fn copy_file(src: &str, dst: &str) -> io::Result<()> {
     // create destination file if it doesn`t exist
     if file_missing(dst) {
-        fs::File::create(dst).unwrap();
+        fs::File::create(dst).expect("Destination file missing. Failed to create missing file");
     }
 
     // copy src to dst
