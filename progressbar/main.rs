@@ -10,6 +10,7 @@ use std::thread;
 
 fn main() {
     progress_bar();
+    progress_bar_simple();
 }
 
 fn sleep(num: u64) {
@@ -32,5 +33,16 @@ fn progress_bar() {
         sleep(15);
     }
 
+    pb.finish_with_message("done");
+}
+
+fn progress_bar_simple() {
+    let end = 512;
+
+    let pb = ProgressBar::new(end);
+    for _ in 0..end {
+        pb.inc(1);
+        sleep(5);
+    }
     pb.finish_with_message("done");
 }
